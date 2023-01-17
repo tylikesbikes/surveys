@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+    Thank you!
+</h1>
+
+<h3>
+    Here are your answers:
+</h3>
+
+<h4>
+    <ol>
+    {% for ans in responses %}
+        <li>
+            {{ans}}
+        </li>
+    {% endfor %}
+    </ol>
+</h4>
+
+{% endblock %}
+

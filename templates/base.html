@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveys Project</title>
+    <link href="/static/app_css.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="warning">
+        {% with messages = get_flashed_messages() %}
+            {%if messages %}
+                {% for msg in messages %}
+                {{msg}}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    
+    </h1>
+    {% block content %}
+
+    {% endblock%}
+    
+</body>
+</html>
